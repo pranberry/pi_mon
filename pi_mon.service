@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/opt/pi_monitor/
-ExecStart=/usr/bin/python3 -m http.server 8085
+ExecStart=/usr/bin/python3 -m http.server 8085 --directory /dev/shm
 Restart=always
 
 [Install]
