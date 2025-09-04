@@ -23,7 +23,7 @@ if [[ "$STATUS" != "0x0" ]]; then
             </tr>
             <tr>
               <td>iotop (top I/O processes)</td>
-              <td>$(iotop -b -n 1 -o 2>&1)</td>
+              <td><pre>$(iotop -b -n 1 -o 2>&1)</pre></td>
             </tr>
             <tr>
               <td>uptime</td>
@@ -31,7 +31,7 @@ if [[ "$STATUS" != "0x0" ]]; then
             </tr>
             <tr>
               <td>free -h (memory)</td>
-              <td>$(free -h)</td>
+              <td><pre>$(free -h)</pre></td>
             </tr>
           </tbody>
         </table>"
@@ -58,7 +58,7 @@ else
             </tr>
             <tr>
               <td>free -h (memory): </td>
-              <td>$(free -h)</td>
+              <td><pre>$(free -h)</pre></td>
             </tr>            
           </tbody>
         </table>"
