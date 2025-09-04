@@ -5,9 +5,8 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/opt/pi_monitor/
-ExecStart=/usr/bin/python3 -m http.server 8080
+ExecStart=/usr/bin/python3 -m http.server 8085
 Restart=always
-User=pi
 
 [Install]
 WantedBy=multi-user.target
