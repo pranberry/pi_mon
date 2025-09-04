@@ -45,17 +45,21 @@ else
         echo "<table>
           <tbody>
             <tr>
-              <td>Last Updated</td>
+              <td>Last Updated: </td>
               <td>$(date)</td>
             </tr>
             <tr>
-              <td>vcgencmd (throttling status)</td>
+              <td>vcgencmd (throttling status): </td>
               <td>$STATUS</td>
             </tr>
             <tr>
-              <td>Temp</td>
+              <td>Temp: </td>
               <td>$TEMP</td>
             </tr>
+            <tr>
+              <td>free -h (memory): </td>
+              <td>$(free -h)</td>
+            </tr>            
           </tbody>
         </table>"
         echo "<h3>===========================</h3>"
