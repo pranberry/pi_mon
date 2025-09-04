@@ -10,19 +10,19 @@ if [[ "$STATUS" != "0x0" ]]; then
     echo "<h1>Undervoltage Monitor</h1>"
     echo "<p>Last updated: $(date)</p>"
 
-    echo "<h2>vcgencmd (throttling status)</h2>"
+    echo "<p>vcgencmd (throttling status)</p>"
     echo "<pre>$STATUS</pre>"
 
-    echo "<h2>vcgencmd (throttling status)</h2>"
+    echo "<p>vcgencmd (throttling status)</p>"
     echo "<pre>$TEMP</pre>"
 
-    echo "<h2>iotop (top I/O processes)</h2>"
+    echo "<p>iotop (top I/O processes)</p>"
     echo "<pre>$(iotop -b -n 1 -o 2>&1)</pre>"
 
-    echo "<h2>uptime</h2>"
+    echo "<p>uptime</p>"
     echo "<pre>$(uptime)</pre>"
 
-    echo "<h2>free -h (memory)</h2>"
+    echo "<p>free -h (memory)</p>"
     echo "<pre>$(free -h)</pre>"
 
     echo "<h3>===========================</h3>"
@@ -32,12 +32,29 @@ else
     {
         echo "<html><head><meta http-equiv='refresh' content='30'>"
         echo "<title>Undervoltage Monitor</title></head><body>"
-        echo "<h1>Undervoltage Monitor</h1>"
-        echo "<h2>Last updated: $(date)</h2>"
-        echo "<h2>vcgencmd (throttling status): $STATUS</h2>"
-        echo "<h2>Nothing to report</h2>"
-        echo "<h2>Temp: $TEMP</h2>"
+        echo "<table>
+          <thead>
+            <tr>
+              <th>Undervoltage Monitor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Last Updated</td>
+              <td>$(date)</td>
+            </tr>
+            <tr>
+              <td>vcgencmd (throttling status)</td>
+              <td>$STATUS</td>
+            </tr>
+            <tr>
+              <td>Temp</td>
+              <td>$TEMP</td>
+            </tr>
+          </tbody>
+        </table>"
         echo "<h3>===========================</h3>"
         echo "</body></html>"
     } >> "$LOGFILE"
 fi
+
