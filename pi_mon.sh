@@ -27,4 +27,12 @@ if [[ "$STATUS" != "0x0" ]]; then
 
     echo "</body></html>"
     } >> "$LOGFILE"
+else
+    {
+        echo "<html><head><meta http-equiv='refresh' content='30'>"
+        echo "<title>Undervoltage Monitor</title></head><body>"
+        echo "<h3>Nothing to report</h3>"
+        echo "</body></html>"
+    } >> "$LOGFILE"
+    }
 fi
