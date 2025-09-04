@@ -31,7 +31,13 @@ else
     {
         echo "<html><head><meta http-equiv='refresh' content='30'>"
         echo "<title>Undervoltage Monitor</title></head><body>"
-        echo "<h3>Nothing to report</h3>"
+        echo "<h1>Undervoltage Monitor</h1>"
+        echo "<p>Last updated: $(date)</p>"
+        echo "<h2>vcgencmd (throttling status)</h2>"
+        echo "<pre>$(STATUS)</pre>"
+        echo "<h2>Nothing to report</h2>"
+        echo "<h2>vcgencmd (throttling status)</h2>"
+        echo "<pre>$(TEMP)</pre>"
         echo "</body></html>"
     } >> "$LOGFILE"
     }
