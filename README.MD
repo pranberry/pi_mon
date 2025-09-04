@@ -6,7 +6,7 @@
 
 ## Setup
 
-- Create the following dirs+files and emable systemD service: 
+- Create the following dirs+files and emable systemD service:
 
 ```bash
 touch /dev/shm/undervolt.html
