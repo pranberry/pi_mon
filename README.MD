@@ -9,7 +9,7 @@
 - Create the following dirs+files and emable systemD service:
 
 ```bash
-touch /dev/shm/undervolt.html
+touch /dev/shm/undervolt.html /dev/shm/status.html
 mkdir -p /opt/pi_monitor/
 cp pi_mon.service /etc/systemd/system/
 sudo systemctl daemon-reload

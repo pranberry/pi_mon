@@ -1,12 +1,15 @@
 #!/usr/bin/bash
 
-LOGFILE="/dev/shm/undervolt.html"
+LOGFILE="/dev/shm/status.html"
+FAIL_LOGFILE="/dev/shm/undervolt.html"
 STATUS=$(vcgencmd get_throttled | awk -F= '{print $2}')
 TEMP=$(vcgencmd measure_temp | awk -F= '{print $2}')
 if [[ "$STATUS" != "0x0" ]]; then
-cat <<EOF >> "$LOGFILE"
+cat <<EOF >> "$FAIL_LOGFILE"
 <html>
-<head><meta http-equiv='refresh' content='30'>
+<head>
+<meta http-equiv='refresh' content='60'>
+<meta name="description" content='Health Status Data'>
 <title>Undervoltage Monitor</title></head>
 <body>
 <table>
@@ -45,8 +48,10 @@ EOF
 else
 cat <<EOF >> "$LOGFILE"
 <html>
-<head><meta http-equiv='refresh' content='30'>
-<title>Undervoltage Monitor</title></head>
+<head>
+<meta name="description" content='Health Status Data'>
+<meta http-equiv='refresh' content='60'>
+<title>Status Monitor</title></head>
 <body>
 <table>
   <tbody>
