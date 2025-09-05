@@ -12,8 +12,8 @@
 touch /dev/shm/undervolt.html
 mkdir -p /opt/pi_monitor/
 cp pi_mon.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable --now pi_mon.service
+systemctl daemon-reload
+systemctl enable --now pi_mon.service
 ```
 
 - Note: log file is in /dev/shm/ because service needs to keep logging after system goes write only. shm is in RAM
