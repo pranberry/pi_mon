@@ -2,11 +2,11 @@
 
 ## Why?
 
-- Periodically, Pi would become unresponsive (no writes, no ssh, no mdns, etc). Figured some event occurs and the ssd enclosure's power draw increases and I lose write access. This scrip setup is to monitor that
+- Periodically, Pi would become unresponsive (no writes, no SSH, no MDNS, etc). Figured some event occurs and the ssd enclosure's power draw increases and I lose write access. This script setup is to monitor such fails
 
 ## Setup
 
-- Create the following dirs+files and emable systemD service:
+- Create the following dirs+files and enable systemD service:
 
 ```bash
 touch /dev/shm/undervolt.html /dev/shm/status.html
