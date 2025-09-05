@@ -11,6 +11,7 @@ cat <<EOF >> "$FAIL_LOGFILE"
 <meta http-equiv='refresh' content='60'>
 <meta name="description" content='Health Status Data'>
 <title>Undervoltage Monitor</title></head>
+<link rel="icon" type="image/x-icon" href="assets/favicon_error.ico">
 <body>
 <table>
   <tbody>
@@ -52,6 +53,7 @@ cat <<EOF >> "$LOGFILE"
 <meta name="description" content='Health Status Data'>
 <meta http-equiv='refresh' content='60'>
 <title>Status Monitor</title></head>
+<link rel="icon" type="image/x-icon" href="assets/favicon_okay.ico">
 <body>
 <table>
   <tbody>
